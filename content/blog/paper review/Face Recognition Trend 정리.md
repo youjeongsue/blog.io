@@ -4,37 +4,8 @@ date: 2020-03-26 23:11:00
 category: 'paper review'
 draft: false
 ---
-<style>
-.red{
-    color:#ff4d4d
-}
 
-.blue{
-    color:#4d4dff;
-}
-
-@media screen and (min-width: 40em){
-    .a{
-        font-size: 6vw;
-    }
-}
-
-a.highlight{
-    color: white;
-    text-decoration: none;
-    background-image: linear-gradient(90deg, rgb(255, 129, 119) 0%, rgb(255, 134, 122) 0%, rgb(255, 140, 127) 21%, rgb(249, 145, 133) 52%, rgb(207, 85, 108) 78%, rgb(177, 42, 91) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    transition: background-size 0.25s ease-in;
-}
-
-a.highlight:hover {
-    background-size: 100% 88%;
-}
-</style>
-
-<a class="highlight">Face Recognition</a>관련 논문은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
+<span class="highlight">Face Recognition</span>관련 논문은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
 논문과 리뷰를 참고하여 대략적으로 요약해보았는데, 잘못 해석했을 여지가 있습니다.. 고쳐야 할 부분이 있다면 조언해주시면 매우 감사하겠습니다
 
 # 요약
