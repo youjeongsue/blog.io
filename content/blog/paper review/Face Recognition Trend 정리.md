@@ -8,12 +8,12 @@ draft: false
 Face Recognition관련 논문은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
 논문과 리뷰를 참고하여 대략적으로 요약해보았는데, 잘못 해석했을 여지가 있습니다.. 고쳐야 할 부분이 있다면 조언해주시면 매우 감사하겠습니다
 
-## 요약
+# 요약
 1.	FaceNet(2015) -> SphereFace(2017) -> CosFace(2018) -> ArcFace(2019)
 2.	학습에 쓰이는 얼굴 데이터와 실제 사용하는 얼굴 데이터가 다른 문제에 대한 논문
 3.	가짜 얼굴 인식(spoofing) 관련 논문
 
-## Face Recognition
+# Face Recognition
 
 ### FaceNet: A Unified Embedding for Face Recognition and Clustering (CVPR 2015)
 1.	https://arxiv.org/pdf/1503.03832v3.pdf
@@ -55,7 +55,7 @@ Facial landmark localisation을 통해 얼굴 인식. 해결방법으로 Stacked
 ![](../image/CosFace1.png)
 ![](../image/CosFace2.png)
 
-## Related to Dataset
+# Related to Dataset
 
 ### Building Computationally Efficient and Well-Generalizing Person Re-Identification Models with Metric Learning (ICPR 2020)
 1.	https://arxiv.org/pdf/2003.07618.pdf
@@ -69,7 +69,7 @@ Facial landmark localisation을 통해 얼굴 인식. 해결방법으로 Stacked
 얼굴 인식 학습에 쓰이는 frontal 이미지와 test(?)에 쓰이는 profile 이미지 간의 차이는 인식을 어렵게 하는 요인이 될 수 있음. 논문에서는 이 둘 사이에 고유한 매핑이 있다고 가정하고, 이 매핑을 활용(? exploit)하기 위해 Deep Residual EquivAriant Mapping(DREAM) block을 사용함. DREAM block을 사용하면 ResNet과 같은 모델에서 profile face recognition의 정확도를 향상시킬 수 있음. Profile face에 대한 별도의 augmenting도 필요 없음! 쓰기 쉽고 가볍고 오버헤드도 적다고 함.
 3. 키워드: <span style="color:#ff4d4d">DREAM block</span>
 
-## Face Anti-Spoofing
+# Face Anti-Spoofing
 
 ### A Dataset and Benchmark for Large-scale Multi-model Face Anti-spoofing (CVPR 2019)
 1.	https://arxiv.org/pdf/1812.00408v3.pdf
@@ -77,7 +77,7 @@ Facial landmark localisation을 통해 얼굴 인식. 해결방법으로 Stacked
 Anti-spoofing이란 가짜로 얼굴 인식하는 것 같고, face-recognition의 보안 측면에서 매우 중요한 task임. 기존의 anti-spoofing benchmark에는 subject(~170), modality(~2)의 개수에 한계가 있었음. 논문에서는 이를 해결하기 위해 21000 video로 이루어진 1000 subject와 3 mode를 지원하는 large-scale multi-modal 데이터셋을 제공하고 있음. 데이터셋 외에도 평가를 위한 protocol이나, training/validation/testing sebset을 제공함.
 3.	키워드: <span style="color:#ff4d4d">Anti-spoofing</span> for face-recognition
 
-## 참고한 사이트
+# 참고한 사이트
 https://paperswithcode.com/task/face-recognition
 https://minus31.github.io/2019/04/08/ArcFace/
 ArcFace에 대한 설명
