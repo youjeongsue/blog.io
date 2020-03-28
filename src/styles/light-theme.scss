@@ -77,16 +77,17 @@ body.light {
     border-left: 4px solid rgba(255, 255, 255, 0.822);
   }
 
-  h1 {
-    letter-spacing: -1px;
-    border-bottom-color: transparent !important;
-  }
-
-  h2 {
+  .post-container h2 {
     border-left: 8px solid #da3a6a;
     padding-left: 8px;
     padding-bottom: 0;
     line-height: 1.05;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: -1px;
+    border-bottom-color: transparent !important;
   }
 
   .navigator {
