@@ -1,7 +1,7 @@
 ---
-title: '추천 시스템과 데이터 엔지니어링'
+title: 'ML 프로젝트와 데이터 엔지니어링'
 date: 2020-03-26 23:11:00
-category: 'mark'
+category: 'etc'
 draft: false
 ---
 
