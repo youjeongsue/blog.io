@@ -10,8 +10,8 @@ a.highlight{
     padding: 2px 0 1px 0;
     text-decoration: none;
     background-image: linear-gradient(transparent 0%,
-        transparent calc(50% -9px),
-        rgba(255,255,102,0.35) calc(50% -9px),
+        transparent calc(50% - 9px),
+        rgba(255,255,102,0.35) calc(50% - 9px),
         rgba(255, 255, 102, 0.35) 100% );
     transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
     background-size: 100% 200%;
