@@ -9,8 +9,8 @@
 a.highlight{
     background-image: linear-gradient(transparent 0%,
         transparent calc(50% -9px),
-        rgba(#ffff66) calc(50% -9px),
-        rgba(#ffff66) 100% );
+        rgba(255,255,102,0.35) calc(50% -9px),
+        rgba(255, 255, 102, 0.35) 100% );
     background-size: 100% 200%;
     word-break: break-word;
     padding: 2px 0px 1px;
