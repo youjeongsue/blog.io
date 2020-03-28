@@ -11,7 +11,7 @@ Face Recognition관련 논문은 FaceNet과 비교 위주로, 다른 논문은 �
 
 # 요약
 1.	FaceNet(2015) -> SphereFace(2017) -> CosFace(2018) -> ArcFace(2019)
-2.	학습에 쓰이는 <span class="highlight">얼굴</span> 데이터와 실제 사용하는 얼굴 데이터가 다른 문제에 대한 논문
+2.	학습에 쓰이는 <a class="highlight">얼굴</a> 데이터와 실제 사용하는 얼굴 데이터가 다른 문제에 대한 논문
 3.	가짜 얼굴 인식(spoofing) 관련 논문
 
 # Face Recognition

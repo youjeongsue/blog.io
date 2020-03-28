@@ -6,7 +6,7 @@
     color:#4d4dff;
 }
 
-.highlight{
+a.highlight{
     background-image: linear-gradient(transparent 0%,
         transparent calc(50% -9px),
         rgba(#ffff66) calc(50% -9px),
