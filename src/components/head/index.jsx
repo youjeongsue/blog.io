@@ -23,10 +23,6 @@ export function Head({ description, lang, meta, keywords, title }) {
                 content: metaDescription,
               },
               {
-                name="google-site-verification",
-                content="8pKyvqZF_GxOGnY_uUEytYeZ5H0STVUiooeWWrQveMY"
-              },
-              {
                 property: `og:title`,
                 content: title,
               },
