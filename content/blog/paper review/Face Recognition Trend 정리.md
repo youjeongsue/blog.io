@@ -5,7 +5,7 @@ category: 'paper review'
 draft: false
 ---
 
-<a href="https://paperswithcode.com/task/face-recognition" class="highlight">Face Recognition</a> 관련 논문은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
+<a href="https://paperswithcode.com/task/face-recognition" class="highlight">Face Recognition 관련 논문</a>은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
 논문과 리뷰를 참고하여 대략적으로 요약해보았는데, 잘못 해석했을 여지가 있습니다.. 고쳐야 할 부분이 있다면 조언해주시면 매우 감사하겠습니다
 
 # 요약
