@@ -5,12 +5,12 @@ category: 'paper review'
 draft: false
 ---
 
-<a href="https://paperswithcode.com/task/face-recognition" class="highlight">Face Recognition</a> 관련 논문은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
+<a href="https://paperswithcode.com/task/face-recognition" class="highlight">Face Recognition 관련 논문</a>은 FaceNet과 비교 위주로, 다른 논문은 내용만 정리하였습니다.  
 논문과 리뷰를 참고하여 대략적으로 요약해보았는데, 잘못 해석했을 여지가 있습니다.. 고쳐야 할 부분이 있다면 조언해주시면 매우 감사하겠습니다
 
 # 요약
 
-1.	FaceNet(2015) -> SphereFace(2017) -> CosFace(2018) -> ArcFace(2019)
+1.	FaceNet(2015) -> SphereFace(2017) -> CosFace(2018) -> ArcFace(2019), VarGFaceNet(2019)
 2.	학습에 쓰이는 얼굴 데이터와 실제 사용하는 얼굴 데이터가 다른 문제에 대한 논문
 3.	가짜 얼굴 인식(spoofing) 관련 논문
 
@@ -24,6 +24,28 @@ draft: false
 <center><img src="../image/FaceNet1.png" width="450"></center>
 <center><img src="../image/FaceNet2.png" width="450"></center>
 
+### SphereFace: Deep Hypersphere Embedding for Face Recognition (CVPR 2017)
+1.	https://arxiv.org/pdf/1704.08063v4.pdf
+2.	요약   
+유클리드 공간으로의 매핑이 아닌 반지름 길이 1의 구의 공간으로 매핑함(Cosine 유사도 사용). 논문에서는 angular softmax loss를 도입하여 CNN 모델이 angularly discriminative feature를 학습할 수 있도록 하였음(더 분명하게 클래스를 구분할 수 있다는 말). FaceNet이 사용한 Euclidean의 경우, 학습되지 않은 이미지의 분류를 시도하면 추출된 feature vector가 다른 class로 분류될 수가 있음. A-Softmax는 weight vector만 normalize함
+3.	키워드: <span class="red">A-Softmax loss</span>
+![](../image/SphereFace.png)
+
+### CosFace: Large Margin Cosine Loss for Deep Face Recognition (CVPR 2018)
+1.	https://arxiv.org/pdf/1801.09414v2.pdf
+2.	요약   
+기존의 softmax를 보완한 LMCL function제안. Weight vector와 feature vector를 둘 다 normalize하여 1~3% 정확도 향상. 정확도와 성능면에서 SphereFace와 비슷하고 데이터의 유형이나 필요에 따라 loss와 normalization을 다르게 적용할 것을 추천하고 있음.
+3.	키워드: <span class="red">Large Margin Cosine Loss(LMCL)</span>
+![](../image/CosFace1.png)
+![](../image/CosFace2.png)
+
+### Stacked Dense U-Nets with Dual Transformers for Robust Face Alignment (2018)
+1.	https://arxiv.org/pdf/1812.01936v1.pdf
+2.	요약   
+Facial landmark localisation을 통해 얼굴 인식. 해결방법으로 Stacked dense U-Nets를 함. 두 가지 새로운 방법을 도입하여 데이터는 손상시키지 않으면서 모델 용량을 크게 줄였음. 2D와 3D에서 실험하였고, 3D에서 결과가 더 잘 나왔음. 포즈에 상관없이 얼굴을 인식할 수 있는 것이 장점.
+3.	키워드: Facial landmark localisation, 3D
+![](../image/SDN.png)
+
 ### ArcFace: Additive Angular Margin Loss for Deep Face Recognition (CVPR 2019)
 1.	https://arxiv.org/pdf/1801.07698v3.pdf
 2.	요약   
@@ -33,28 +55,7 @@ draft: false
 ![](../image/ArcFace2.png)
 ![](../image/ArcFace3.png)
 
-### Stacked Dense U-Nets with Dual Transformers for Robust Face Alignment (2018)
-1.	https://arxiv.org/pdf/1812.01936v1.pdf
-2.	요약   
-Facial landmark localisation을 통해 얼굴 인식. 해결방법으로 Stacked dense U-Nets를 함. 두 가지 새로운 방법을 도입하여 데이터는 손상시키지 않으면서 모델 용량을 크게 줄였음. 2D와 3D에서 실험하였고, 3D에서 결과가 더 잘 나왔음. 포즈에 상관없이 얼굴을 인식할 수 있는 것이 장점. 굳이 3D까지 할 필요는 없을 듯!
-3.	키워드: Facial landmark localisation, 3D
-![](../image/SDN.png)
-
-### SphereFace: Deep Hypersphere Embedding for Face Recognition (CVPR 2017)
-1.	https://arxiv.org/pdf/1704.08063v4.pdf
-2.	요약   
-유클리드 공간으로의 매핑이 아닌 반지름 길이 1의 구의 공간으로 매핑함(Cosine 유사도 사용). 논문에서는 angular softmax loss를 도입하여 CNN 모델이 angularly discriminative feature를 학습할 수 있도록 하였음(더 분명하게 클래스를 구분할 수 있다는 말). FaceNet이 사용한 Euclidean의 경우, 학습되지 않은 이미지의 분류를 시도하면 추출된 feature vector가 다른 class로 분류될 수가 있음. A-Softmax는 weight vector만 normalize함
-3.	키워드: <span class="red">A-Softmax loss</span>
-![](../image/SphereFace.png)
-
-
-### CosFace: Large Margin Cosine Loss for Deep Face Recognition (CVPR 2018)
-1.	https://arxiv.org/pdf/1801.09414v2.pdf
-2.	요약   
-기존의 softmax를 보완한 LMCL function제안. Weight vector와 feature vector를 둘 다 normalize하여 1~3% 정확도 향상. 정확도와 성능면에서 SphereFace와 비슷하고 데이터의 유형이나 필요에 따라 loss와 normalization을 다르게 적용할 것을 추천하고 있음.
-3.	키워드: <span class="red">Large Margin Cosine Loss(LMCL)</span>
-![](../image/CosFace1.png)
-![](../image/CosFace2.png)
+### VarGFaceNet: An Efficient Variable Group Convolutional Neural Network for Lightweight Face Recognition (2019)
 
 # Related to Dataset
 
@@ -79,7 +80,6 @@ Anti-spoofing이란 가짜로 얼굴 인식하는 것 같고, face-recognition�
 3.	키워드: <span class="red">Anti-spoofing</span> for face-recognition
 
 # 참고한 사이트
-https://paperswithcode.com/task/face-recognition
-https://minus31.github.io/2019/04/08/ArcFace/
-ArcFace에 대한 설명
-https://tmaxai.github.io/post/review_SphereFace/ SphereFace와 CosFace에 대한 설명, 목적에 맞는 오픈 데이터셋 선택 팁 있음
+https://paperswithcode.com/task/face-recognition   
+https://minus31.github.io/2019/04/08/ArcFace/ : ArcFace에 대한 설명
+https://tmaxai.github.io/post/review_SphereFace/ : SphereFace와 CosFace에 대한 설명, 목적에 맞는 오픈 데이터셋 선택 팁 있음
