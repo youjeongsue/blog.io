@@ -4,7 +4,7 @@ date: 2020-04-23 23:39:00
 category: 'etc'
 draft: false
 ---
-<a href="https://queue.acm.org/detail.cfm?id=1466448" class="highlight">EVENTUALLY CONSISTENT</a>를 읽고 짧은 요약과 리뷰를 남깁니다.<dt>
+<a href="https://queue.acm.org/detail.cfm?id=1466448" class="highlight">EVENTUALLY CONSISTENT</a>를 읽고 짧은 요약과 리뷰를 남깁니다.<br/>
 
 클라우드 서비스를 주도하고 있는 아마존은 security, scalability, availability, performance, cost effectiveness를 적절히 유지하면서 수백명의 고객에게 서비스하기 위해 노력해왔다. 이를 위한 노력 중 하나가 data replication의 eventual consistency 모델이다. 수많은 replication 간 결과적 의존성을 보장하는 방법이다. Strong consistency 대신 더 나은 availability를 얻는다는 trade-off가 있다.<br/>
 
