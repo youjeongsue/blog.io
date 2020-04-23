@@ -1,7 +1,7 @@
 ---
 title: 'Face Recognition Trend 정리'
 date: 2020-03-26 23:11:00
-category: 'paper review'
+category: 'paper'
 draft: false
 ---
 
