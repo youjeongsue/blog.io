@@ -43,9 +43,6 @@ export default ({ data, pageContext, location }) => {
       <PostDate date={date} />
       <PostContainer html={post.html} />
       <SocialShare title={title} author={author} />
-      {!!sponsor.buyMeACoffeeId && (
-        <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
-      )}
       <Elements.Hr />
       <Bio />
       <PostNavigator pageContext={pageContext} />
@@ -72,9 +69,6 @@ export const pageQuery = graphql`
         comment {
           disqusShortName
           utterances
-        }
-        sponsor {
-          buyMeACoffeeId
         }
       }
     }
